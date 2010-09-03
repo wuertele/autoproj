@@ -3,10 +3,16 @@
 
 AC_PREREQ(2.61)
 
-AC_INIT([minautoproj], [1.0], [dave+minautoproj@wuertele.com])
+AC_INIT([autoproj], [1.0], [dave+autoproj@wuertele.com])
+
+#AC_CONFIG_MACRO_DIR([m4])
+
 AM_INIT_AUTOMAKE
 
-AC_CONFIG_SRCDIR([hello.c])
+LT_PREREQ([2.2])
+LT_INIT([dlopen])
+
+AC_CONFIG_SRCDIR([programs/hello.c])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
@@ -55,8 +61,13 @@ fi
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile
-		 common/Makefile])
+		 commonstat/Makefile
+		 include/Makefile
+		 libprojdyn1/Makefile
+		 programs/Makefile])
+
 AC_OUTPUT
+
 
 echo \
 "-------------------------------------------------

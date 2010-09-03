@@ -12,12 +12,12 @@
 ***	Steal This Program!!!
 **/
 
-#include <jupcommon.h>
+#include <projdyn1.h>
 
 int
 main (int argc, char * argv[])
 {
-  print_routine (argv[0]);
+  proj_print (argv[0]);
 
   return 0;
 }

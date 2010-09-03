@@ -6,7 +6,7 @@
 ***	Steal This Program!!!
 **/
 
-#include <jupcommon.h>
+#include <commonstat.h>
 
 #if HAVE_CONFIG_H
 # include <config.h>
@@ -19,13 +19,15 @@
 # include <pthread.h>
 #endif
 
-static void * print_it(void * data)
+static void *
+print_it (void * data)
 {
    printf("Hello from %s!\n", (char *)data);
    return 0;
 }
 
-int print_routine(char * name)
+int
+print_routine (char * name)
 {
 #if ASYNC_EXEC
    pthread_t tid;

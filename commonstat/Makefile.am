@@ -1,2 +1,2 @@
-noinst_LIBRARIES = libjupcommon.a
-libjupcommon_a_SOURCES = jupcommon.h print.c
+noinst_LTLIBRARIES = libcommonstat.la
+libcommonstat_la_SOURCES = commonstat.h print.c

@@ -4,8 +4,11 @@
 ***	Steal This Program!!!
 **/
 
-#include <libcommonstat.h>
+/* headers for this library (always list first)  */
 #include <projdyn1.h>
+
+/* other headers */
+#include <commonstat.h>
 
 int
 proj_print (char * name)

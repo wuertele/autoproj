@@ -1,7 +1,2 @@
-SUBDIRS = common
-bin_PROGRAMS = hello
-hello_SOURCES = hello.c
-
-
-hello_CPPFLAGS = -I$(top_srcdir)/common
-hello_LDADD = common/libjupcommon.a
+#ACLOCAL_AMFLAGS = -I m4
+SUBDIRS = commonstat include libprojdyn1 programs
