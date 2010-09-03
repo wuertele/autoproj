@@ -20,21 +20,31 @@
 #endif
 
 static void *
-print_it (void * data)
+print_it (void *data)
 {
-   printf("Hello from %s!\n", (char *)data);
+   char **strings = (char **) data;
+   printf("%s from %s!\n", strings[0], strings[1]);
    return 0;
 }
 
 int
-print_routine (char * name)
+sal_print_routine (char *salutation, char *name)
 {
+   char * strings[] = {salutation, name};
+
 #if ASYNC_EXEC
    pthread_t tid;
-   pthread_create(&tid, 0, print_it, name);
-   pthread_join(tid, 0);
+   pthread_create (&tid, 0, print_it, strings);
+   pthread_join (tid, 0);
 #else
-   print_it(name);
+   print_it (strings);
 #endif
    return 0;
 }
+
+int
+print_routine (char *name)
+{
+  sal_print_routine ("Hello", name);
+}
+

@@ -9,6 +9,7 @@
 #ifndef __COMMONSTAT_SEEN__	/* Protect against re-inclusion of this file. */
 #define __COMMONSTAT_SEEN__
 
-int print_routine(char * name);
+int print_routine (char * name);
+int sal_print_routine (char *salutation, char *name);
 
 #endif /* __COMMONSTAT_SEEN__ */

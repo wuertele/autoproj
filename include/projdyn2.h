@@ -1,5 +1,5 @@
 /**
-***	projdyn1.h		
+***	projdyn2.h		
 ***
 ***	David Wuertele		Thu Sep  2 16:04:29 2010
 ***

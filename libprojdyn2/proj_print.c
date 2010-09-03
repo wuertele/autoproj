@@ -5,13 +5,13 @@
 **/
 
 /* headers for this library (always list first)  */
-#include <projdyn1.h>
+#include <projdyn2.h>
 
 /* other headers */
 #include <commonstat.h>
 
 int
-proj_print (char * name)
+proj_sal_print (char *salutation, char *name)
 {
-   print_routine (name);
+   sal_print_routine (salutation, name);
 }
